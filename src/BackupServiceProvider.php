@@ -25,6 +25,12 @@ class BackupServiceProvider extends ServiceProvider
             $adapter = new WebDAVAdapter($client);
             return new Filesystem($adapter);
         });
+
+        $this->publishes([
+            __DIR__.'/../config/backup.php' => config_path('backup.php'),
+        ], 'config');
+
+        config(['laravel-backup' => config('backup')]);
     }
 
     /**

@@ -32,14 +32,20 @@ composer require wertmenschen/backup
 ];
 ```
 
-#### Publish the Spatie backup config file
+#### Optional: Publish the backup config file (overrides Spatie config)
 ```shell
-php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+php artisan vendor:publish --provider="Wertmenschen\Backup\BackupServiceProvider"
 ```
 
-Spatie documentation: https://docs.spatie.be/laravel-backup/v4/installation-and-setup
+#### Set keys in .env
+* BACKUP_URL
+* BACKUP_USERNAME
+* BACKUP_PASSWORD
+* BACKUP_SLACK_WEBHOOK
 
 #### Schedule backups
+Spatie documentation: https://docs.spatie.be/laravel-backup/v4
+
 ``` php
 // app/Console/Kernel.php
 
