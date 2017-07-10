@@ -23,14 +23,12 @@ composer require wertmenschen/backup
 // config/filesystems.php
 
 'disks' => [
-	...
 	'webdav' => [
 	    'driver'   => 'webdav',
 	    'baseUri'  => 'https://mywebdavstorage.com',
 	    'userName' => 'user',
-	    'password' => 'password,
+	    'password' => 'password',
 	],
-	...
 ];
 ```
 
