@@ -1,24 +1,24 @@
 # Wertmenschen Backup
 
-####Require this package with composer
+#### Require this package with composer
 
 ```shell
 composer require wertmenschen/backup
 ```
 
-####Register the service provider
+#### Register the service provider
 
 ``` php
 // config/app.php
 
 'providers' => [
     ...
-    Wertmenschen\FilesystemProviders\WebDAVServiceProvider::class
+    Wertmenschen\Backup\BackupServiceProvider::class,
     ...
 ];
 ```
 
-####Create a webdav filesystem
+#### Create a webdav filesystem
 ``` php
 // config/filesystems.php
 
@@ -34,14 +34,14 @@ composer require wertmenschen/backup
 ];
 ```
 
-####Publish the Spatie backup config file
+#### Publish the Spatie backup config file
 ```shell
 php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
 ```
 
 Spatie documentation: https://docs.spatie.be/laravel-backup/v4/installation-and-setup
 
-####Schedule backups
+#### Schedule backups
 ``` php
 // app/Console/Kernel.php
 
