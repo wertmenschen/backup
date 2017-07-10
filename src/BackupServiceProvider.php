@@ -30,6 +30,10 @@ class BackupServiceProvider extends ServiceProvider
             __DIR__.'/../config/backup.php' => config_path('backup.php'),
         ], 'config');
 
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/backup.php', 'backup'
+        );
+
         config(['laravel-backup' => config('backup')]);
     }
 
