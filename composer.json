@@ -42,7 +42,7 @@
         },
         "laravel": {
           "providers": [
-              "Wertmenschen\Backup\BackupServiceProvider"
+              "Wertmenschen\\Backup\\BackupServiceProvider"
           ]
       }
     },
