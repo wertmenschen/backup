@@ -6,18 +6,6 @@
 composer require wertmenschen/backup
 ```
 
-#### Register the service provider
-
-``` php
-// config/app.php
-
-'providers' => [
-    ...
-    Wertmenschen\Backup\BackupServiceProvider::class,
-    ...
-];
-```
-
 #### Create a webdav filesystem
 ``` php
 // config/filesystems.php
